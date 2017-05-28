@@ -2,6 +2,7 @@ package br.com.fiap.ex2;
 
 public class Main {
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		EquipamentoEletronico tablet = new Tablet();
 		EquipamentoEletronico smartphone = new Smartphone();
