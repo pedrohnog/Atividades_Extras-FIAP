@@ -13,24 +13,39 @@ public class Aeroporto extends Thread {
 		this.nome = nome;
 	}
 
-	public synchronized boolean isPistaDisponivel() {
-		System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.S"))
-				+ "] AEROPORTO " + this.nome + " VERIFICANDO LIBERA«√O DA PISTA");
-		while (!this.pistaDisponivel) {
-			System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.S"))
-					+ "] AEROPORTO " + this.nome + " AGUARDANDO LIBERA«√O DA PISTA");
+	@Override
+	public void run() {
+		while(true) {
 			this.alterarEstadoPista();
+			this.aguardarPistaDisponivel();
+		}
+	}
+
+	public synchronized void aguardarPistaDisponivel() {
+		System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.S"))
+				+ "] AEROPORTO " + this.nome + " VERIFICANDO LIBERA√á√ÉO DA PISTA");
+		if (!this.pistaDisponivel) {
+			try {
+				System.out
+						.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.S"))
+								+ "] AEROPORTO " + this.nome + " AGUARDANDO LIBERA√á√ÉO DA PISTA");
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 		System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.S"))
 				+ "] AEROPORTO " + this.nome + " LIBERANDO PISTA");
-		return this.pistaDisponivel;
 	}
 
-	public void alterarEstadoPista() {
+	public synchronized void alterarEstadoPista() {
 		try {
-			if (!this.pistaDisponivel) {
+			while (true) {
 				sleep(3 * 1000l);
-				this.pistaDisponivel = true;
+				this.pistaDisponivel = !this.pistaDisponivel;
+				if (this.pistaDisponivel) {
+					notifyAll();
+				}
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -43,6 +58,10 @@ public class Aeroporto extends Thread {
 
 	public void setPistaDisponivel(boolean pistaDisponivel) {
 		this.pistaDisponivel = pistaDisponivel;
+	}
+
+	public boolean isPistaDisponivel() {
+		return pistaDisponivel;
 	}
 
 }
