@@ -5,7 +5,7 @@ import java.sql.Date;
 
 public class Pedidos implements Serializable {
 
-	private static final long serialVersionUID = 3185792232869943113L;
+	private static final long serialVersionUID = -1929055711648799211L;
 	
 	private int id;
 	private int idCliente;
@@ -51,6 +51,14 @@ public class Pedidos implements Serializable {
 
 	public void setValor(double valor) {
 		this.valor = valor;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Pedidos [id=").append(id).append(", idCliente=").append(idCliente).append(", data=")
+				.append(data).append(", descricao=").append(descricao).append(", valor=").append(valor).append("]");
+		return builder.toString();
 	}
 
 }

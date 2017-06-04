@@ -6,7 +6,7 @@ import br.com.fiap.entity.Pedidos;
 public class PedidosDao extends Dao {
 	
 	public void incluirPedido(Pedidos pedido) {
-		String query = "INSERT INTO PEDIDOS ('idcliente', 'data', 'descricao', 'valor') VALUES (?, ?, ?, ?)";
+		String query = "INSERT INTO PEDIDOS (idcliente, data, descricao, valor) VALUES (?, ?, ?, ?)";
 		
 		try {
 			super.abrirConexao();

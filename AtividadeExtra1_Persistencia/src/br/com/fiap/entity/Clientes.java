@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Clientes implements Serializable {
 
-	private static final long serialVersionUID = 5438061890351934729L;
-
+	private static final long serialVersionUID = -5139448525177108562L;
+	
 	private int id;
 	private String nome;
 	private String email;
@@ -42,6 +42,14 @@ public class Clientes implements Serializable {
 
 	public void setPedidos(List<Pedidos> pedidos) {
 		this.pedidos = pedidos;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Clientes [id=").append(id).append(", nome=").append(nome).append(", email=").append(email)
+				.append(", pedidos=").append(pedidos).append("]");
+		return builder.toString();
 	}
 
 }

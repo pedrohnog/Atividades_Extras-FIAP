@@ -12,9 +12,11 @@ public abstract class Dao {
 	protected PreparedStatement stmt;
 	protected ResultSet rs;
 
-	private String url = "jdbc:mysql://localhost/vendas";
+	private String url = "jdbc:mysql://localhost:3306/vendas?autoReconnect=true&useSSL=false";
 
 	protected void abrirConexao() throws Exception {
+		Class.forName("com.mysql.jdbc.Driver");
+		
 		this.cn = DriverManager.getConnection(this.url, "fiap", "fiap");
 	}
 

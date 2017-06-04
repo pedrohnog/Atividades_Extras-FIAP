@@ -6,7 +6,7 @@ import br.com.fiap.entity.Clientes;
 public class ClientesDao extends Dao {
 	
 	public void incluirCliente(Clientes cliente) {
-		String query = "INSERT INTO CLIENTES ('nome', 'email') VALUES (?, ?)";
+		String query = "INSERT INTO CLIENTES (nome, email) VALUES (?, ?)";
 		
 		try {
 			super.abrirConexao();
