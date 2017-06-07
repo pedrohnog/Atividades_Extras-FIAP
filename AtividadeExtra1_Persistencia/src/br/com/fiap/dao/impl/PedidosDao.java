@@ -21,6 +21,8 @@ public class PedidosDao extends Dao {
 			super.stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			super.fecharConexao();
 		}
 		
 	}
@@ -48,6 +50,8 @@ public class PedidosDao extends Dao {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			super.fecharConexao();
 		}
 		
 		return pedidos;

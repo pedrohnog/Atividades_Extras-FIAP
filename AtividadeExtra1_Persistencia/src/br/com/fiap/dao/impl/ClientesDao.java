@@ -19,6 +19,8 @@ public class ClientesDao extends Dao {
 			super.stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			super.fecharConexao();
 		}
 		
 	}
@@ -44,6 +46,8 @@ public class ClientesDao extends Dao {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			super.fecharConexao();
 		}
 		
 		return clientes;
