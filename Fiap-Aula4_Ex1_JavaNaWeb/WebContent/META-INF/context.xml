@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Realm className="org.apache.catalina.realm.JAASRealm" appName="Fiap-Aula4_Ex1_JavaNaWeb"
+		   userClasseName="br.com.fiap.autenticacao.UsuarioEntidade"
+		   roleClassName="br.com.fiap.autenticacao.PerfilEntidade" />
+</Context>
