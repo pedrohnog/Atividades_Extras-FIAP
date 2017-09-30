@@ -1,0 +1,64 @@
+package com.fiap.exemplo.ws;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.xml.ws.WebServiceContext;
+import javax.xml.ws.handler.MessageContext;
+
+@WebService
+public class AlunoWeb {
+	
+	@Resource
+	WebServiceContext wsctx;
+	
+	private List<Aluno> alunos;
+	
+	public AlunoWeb() {
+		alunos = new ArrayList<>();
+	}
+	
+	@SuppressWarnings("unchecked")
+	private boolean autenticado() {
+		MessageContext messageContext = wsctx.getMessageContext();
+		
+		Map<String, List<String>> httpHeaders = (Map<String, List<String>>) messageContext.get(MessageContext.HTTP_REQUEST_HEADERS);
+		
+		List<String> usuarios = httpHeaders.get("Username");
+		List<String> senhas = httpHeaders.get("Senha");
+		
+		if (usuarios == null || usuarios.get(0) == null || senhas == null || senhas.get(0) == null) {
+			return false;
+		}
+		
+		String usuario = usuarios.get(0);
+		String senha = senhas.get(0);
+		
+		return usuario != null && usuario.equals("pedro") && senha != null && senha.equals("123");
+		
+	}
+	
+	@WebMethod
+	public String novo(Aluno a) throws Exception {
+		if (this.autenticado()) {
+			this.alunos.add(a);
+			return "Cadastrado";
+		} else {
+			throw new Exception("Usuário e/ou senha inválida");
+		}
+	}
+	
+	@WebMethod
+	public List<Aluno> listar() throws Exception {
+		if (this.autenticado()) {
+			return this.alunos;
+		} else {
+			throw new Exception("Usuário e/ou senha inválida");
+		}
+	}
+	
+}

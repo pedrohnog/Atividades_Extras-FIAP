@@ -1,0 +1,41 @@
+
+‰squid:S2737z"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ø¥› ûÿÿÿÿHıRMINORZ
+CODE_SMELL
+¾%squid:RedundantThrowsDeclarationCheck2"wRemove the declaration of thrown exception 'org.apache.axis.AxisFault', as it cannot be thrown from constructor's body.(Üé†çHşRMINORZ
+CODE_SMELL
+‘squid:S1192"\Define a constant instead of duplicating this literal "http://exemplos.fiap.com.br" 3 times.(û†èùÿÿÿÿHÿRCRITICALZ
+CODE_SMELL
+ˆsquid:S3008"VRename this field "_operations" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆß–ÿÿÿÿÿH€RMINORZ
+CODE_SMELL
+asquid:S1068"4Remove this unused "cachedSerClasses" private field.(Û‡÷—HRMAJORZ
+CODE_SMELL
+`squid:S1068"3Remove this unused "cachedSerQNames" private field.(ÍîåšH‚RMAJORZ
+CODE_SMELL
+hsquid:S1068"6Remove this unused "cachedSerFactories" private field.(¸Æ§ùÿÿÿÿHƒRMAJORZ
+CODE_SMELL
+esquid:S1068"8Remove this unused "cachedDeserFactories" private field.(õ³ˆÖH„RMAJORZ
+CODE_SMELL
+gsquid:S1141s"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿH…RMAJORZ
+CODE_SMELL
+|squid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Í½ßH†RMINORZ
+CODE_SMELL
+Rsquid:S1181W"%Catch Exception instead of Throwable.(Òó îH‡RMAJORZ
+CODE_SMELL
+„squid:S00117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã×“ÁúÿÿÿÿHˆRMINORZ
+CODE_SMELL
+squid:S00117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òó îH‰RMINORZ
+CODE_SMELL
+„squid:S00117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿöá¢üÿÿÿÿHŠRMINORZ
+CODE_SMELL
+„squid:S00117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ¼”ÎøÿÿÿÿH‹RMINORZ
+CODE_SMELL
+„squid:S00117u"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë‚ÖûÿÿÿÿHŒRMINORZ
+CODE_SMELL
+’squid:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Û‡÷—HRMAJORZ
+CODE_SMELL
+’squid:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ÍîåšHRMAJORZ
+CODE_SMELL
+—squid:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(¸Æ§ùÿÿÿÿHRMAJORZ
+CODE_SMELL
+’squid:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(õ³ˆÖHRMAJORZ
+CODE_SMELL

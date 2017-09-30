@@ -1,0 +1,15 @@
+
+squid:S1192 "[Define a constant instead of duplicating this literal "PrimeiroHttpSoap11Endpoint" 4 times.(ÿã¯õøÿÿÿÿHöRCRITICALZ
+CODE_SMELL
+Wsquid:S1181Q"%Catch Exception instead of Throwable.(°ÅÉùÿÿÿÿH÷RMAJORZ
+CODE_SMELL
+ squid:S00116"mRename this field "PrimeiroHttpSoap11Endpoint_address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£Çù—úÿÿÿÿHøRMINORZ
+CODE_SMELL
+§squid:S00116 "tRename this field "PrimeiroHttpSoap11EndpointWSDDServiceName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿã¯õøÿÿÿÿHùRMINORZ
+CODE_SMELL
+squid:S001177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖûÅHúRMINORZ
+CODE_SMELL
+squid:S00117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïåãHûRMINORZ
+CODE_SMELL
+squid:S00117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÿôŞHüRMINORZ
+CODE_SMELL
