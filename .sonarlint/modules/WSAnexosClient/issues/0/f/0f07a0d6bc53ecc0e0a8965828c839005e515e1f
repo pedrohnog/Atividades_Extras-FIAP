@@ -1,0 +1,5 @@
+
+usquid:S1075"ARefactor your code to get this URI from a customizable parameter.(×íûª8Ì‚†¢í+H˜RMINORZ
+CODE_SMELL
+_squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ì‚†¢í+H—RMINORZVULNERABILITY
+|squid:S2674"JCheck the return value of the "read" call to see how many bytes were read.(Æªá¥ùÿÿÿÿ8Óí‰¢í+H™RMINORZBUG
