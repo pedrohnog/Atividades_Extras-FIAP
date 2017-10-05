@@ -7,15 +7,19 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.glassfish.jersey.client.filter.HttpBasicAuthFilter;
+
 public class TesteLista {
 
 	public static void main(String[] args) {
 		Client cliente = ClientBuilder.newClient();
+		
+		cliente.register(new HttpBasicAuthFilter("fabio", "123"));
 
 		WebTarget target = cliente.target("http://localhost:8080/Exemplo4_WSeRestFULL").path("alunos");
 
 		Builder invocationBuilder = target.request(MediaType.APPLICATION_JSON);
-
+		
 		Response resposta = invocationBuilder.get();
 
 		Alunos alunos = resposta.readEntity(Alunos.class);
